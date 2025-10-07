@@ -7,9 +7,17 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-377W2JX8Y6');
     </script>
+
+    <!-- Google captcha v3 -->
+     <script src="https://www.google.com/recaptcha/api.js"></script>
+      <script>
+      function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+      }
+      </script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -196,7 +204,12 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 <textarea placeholder="Enter your message" rows="4" cols="50" id="message-f979" name="message" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required=""></textarea>
               </div>
               <div class="u-align-center u-form-group u-form-submit u-label-none">
-                <a href="#" class="u-active-palette-1-base u-black u-border-none u-btn u-btn-submit u-button-style u-hover-palette-1-base u-radius u-text-body-alt-color u-btn-1"> Contact Metric Trails</a>
+                <a href="#" class="u-active-palette-1-base u-black u-border-none u-btn u-btn-submit u-button-style u-hover-palette-1-base u-radius u-text-body-alt-color u-btn-1"> 
+                  <button class="g-recaptcha" 
+                        data-sitekey="6Le15-ErAAAAAP_UnZaI7FWRJAtlqvHb7Nd3KJZd" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>Contact Metric Trails</button>
+                </a>
                 <input type="submit" value="submit" class="u-form-control-hidden">
               </div>
               <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
