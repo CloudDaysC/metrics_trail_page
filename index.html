@@ -199,6 +199,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <textarea placeholder="Enter your message" rows="4" cols="50" id="message-f979" name="message" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required></textarea>
     </div>
     
+<input type="hidden" name="_next" value="http://metrictrails.com/index.html?submitted=true">
+
+
     <div class="u-align-center u-form-group u-form-submit u-label-none">
         <a href="#" class="u-active-palette-1-base u-black u-border-none u-btn u-btn-submit u-button-style u-hover-palette-1-base u-radius u-text-body-alt-color u-btn-1"> Contact Metric Trails</a>
         <input type="submit" value="submit" class="u-form-control-hidden">
@@ -218,5 +221,21 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80"> Contact <a href="metrictrails@gmail.com">metrictrails@gmail.com</a>
     </section>
+
+
+    <script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Check if the 'submitted' parameter is present and true
+    if (urlParams.get('submitted') === 'true') {
+      alert('✅ Your message has been successfully submitted to Metric Trails!');
+      
+      // Clean the URL by removing the query parameter to prevent the alert on refresh
+      history.replaceState(null, '', window.location.pathname);
+    }
+  });
+</script>
   
 </body></html>
